@@ -1,0 +1,65 @@
+{
+  "interests": [
+    {
+      "label": "Python",
+      "image": {
+        "src": "../../images/python.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Docker",
+      "image": {
+        "src": "../../images/docker.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Machine Learning",
+      "image": {
+        "src": "../../images/ml.jpg",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Medium Integration",
+      "image": {
+        "src": "../../images/medium.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Animations",
+      "image": {
+        "src": "../../images/gem-stone.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "PWA (Offline Support)",
+      "image": {
+        "src": "../../images/mobile-phone.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Modern Tech-Stack",
+      "image": {
+        "src": "../../images/gatsby.png",
+        "alt": ""
+      }
+    },
+    {
+      "label": "Blazing Fast",
+      "image": {
+        "src": "../../images/high-voltage.png",
+        "alt": ""
+      }
+    }
+  ],
+  "button": {
+    "visible": true,
+    "label": "+ Load More",
+    "initiallyShownInterests": 5
+  }
+}

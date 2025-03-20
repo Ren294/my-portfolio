@@ -1,0 +1,21 @@
+{
+  "sectionId": "education",
+  "title": "Education",
+  "description": "My educational background and qualifications",
+  "items": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "school": "Example University",
+      "period": "2014 - 2018",
+      "description": "Graduated with honors, specialized in software development",
+      "achievements": ["Dean's List", "Best Final Project Award"]
+    },
+    {
+      "degree": "High School Diploma",
+      "school": "Example High School",
+      "period": "2010 - 2014",
+      "description": "Graduated with high honors",
+      "achievements": ["Valedictorian", "National Honor Society"]
+    }
+  ]
+} 

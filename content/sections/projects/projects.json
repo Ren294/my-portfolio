@@ -1,0 +1,81 @@
+{
+  "projects": [
+    {
+      "visible": true,
+      "category": "PERSONAL PROJECT",
+      "title": "SmartTraffic Lakehouse for HCMC",
+      "description": "A Smart Traffic Management System for Ho Chi Minh City, Vietnam leveraging batch and real-time data processing, intuitive dashboards, and monitoring tools to optimize traffic flow, enhance safety, and support sustainable urban mobility through advanced analytics and user-friendly applications.",
+      "tags": ["Lambda Architecture", "Medallion Architecture", "Lakehouse Architecture"],
+      "image": {
+        "src": "../../images/SmartTraffic.png",
+        "alt": "Github",
+        "linkTo": "https://github.com/Ren294/SmartTraffic_Lakehouse_for_HCMC"
+      },
+      "links": [
+        {
+          "type": "github",
+          "url": "https://github.com/Ren294/SmartTraffic_Lakehouse_for_HCMC"
+        }
+      ]
+    },
+    {
+        "visible": true,
+        "category": "PERSONAL PROJECT",
+        "title": "Ecommerce Insights Lakehouse",
+        "description": "Developed an end-to-end E-commerce Data Lakehouse to unify structured and semi-structured data from multiple sources, enabling high-performance analytics and business intelligence. The architecture supports real-time insights, trend analysis to optimize business operations.",
+        "tags": ["Lambda Architecture", "Medallion Architecture", "Lakehouse Architecture"],
+        "image": {
+          "src": "../../images/Ecom.png",
+          "alt": "Github",
+          "linkTo": "https://github.com/Ren294/ECommerce-Insights-LakeHoues"
+        },
+        "links": [
+          {
+            "type": "github",
+            "url": "https://github.com/Ren294/ECommerce-Insights-LakeHoues"
+          }
+        ]
+      },
+      {
+        "visible": true,
+        "category": "PERSONAL PROJECT",
+        "title": "Log Analysis Project",
+        "description": "Built a scalable, fault-tolerant log analytics pipeline based on the Lambda architecture, capable of processing and analyzing NASA web server logs in both real-time and batch modes. Provides comprehensive log insights, anomaly detection, and historical trend analysis to enhance system monitoring and security.",
+        "tags": ["Content Integration", "Ready-2-Deploy"],
+        "image": {
+          "src": "../../images/log.jpeg",
+          "alt": "Github",
+          "linkTo": "https://github.com/Ren294/Log-Analysis-Project"
+        },
+        "links": [
+          {
+            "type": "github",
+            "url": "https://github.com/Ren294/Log-Analysis-Project"
+          }
+        ]
+      },
+      {
+        "visible": true,
+        "category": "PERSONAL PROJECT",
+        "title": "COVID-19 Data Processing",
+        "description": "Engineered a real-time COVID-19 data pipeline for efficient data ingestion, transformation, and visualization, enabling public health officials to track key metrics. Integrates streaming and batch processing to deliver up-to-date insights via interactive dashboards and automated reports.",
+        "tags": ["Content Integration", "Ready-2-Deploy"],
+        "image": {
+          "src": "../../images/covid.jpeg",
+          "alt": "Github",
+          "linkTo": "https://github.com/Ren294/Covid-Data-Process"
+        },
+        "links": [
+          {
+            "type": "github",
+            "url": "https://github.com/Ren294/Covid-Data-Process"
+          }
+        ]
+      }
+  ],
+  "button": {
+    "visible": true,
+    "label": "See more on Github",
+    "url": "https://github.com/Ren294/Covid-Data-Process"
+  }
+}

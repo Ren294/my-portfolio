@@ -1,0 +1,22 @@
+{
+  "intro": "Hi there,",
+  "heroPhoto": {
+    "src": "../../images/lego-dummy.jpg",
+    "alt": "Ren's Photo"
+  },
+  "image": {
+    "src": "../../images/waving-hand1.png",
+    "alt": "Waving Hand Emoji"
+  },
+  "title": "I'm NGUYEN TRUNG NGHIA",
+  "subtitle": {
+    "prefix": "I am into",
+    "highlight": " Big Data Engineering | MLOps",
+    "suffix": "."
+  },
+  "description": "A data engineer eager to build scalable data systems and apply AI to solve real-world challenges. I am passionate about data, machine learning, and cloud technologies.",
+  "socialProfiles": {
+    "from": ["LinkedIn", "Github", "Mail"],
+    "showIcons": true
+  }
+}

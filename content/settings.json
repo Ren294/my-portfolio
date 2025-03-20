@@ -1,0 +1,45 @@
+{
+  "siteMetadata": {
+    "language": "en",
+    "title": "Gatsby Starter for Portfolio Minimal",
+    "titleTemplate": "%s · Portfolio Minimal",
+    "description": "A Gatsby Starter Project to easily get started with Portfolio Minimal theme.",
+    "author": "Nguyen Trung Nghia",
+    "avatar": "../content/images/lego-dummy.jpg",
+    "bio": "This biography will be used in the footer area of an article and can contain some more details about the author.",
+    "social": {
+      "behance": "https://behance.com",
+      "github": "https://github.com/Ren294",
+      "medium": "https://medium.com/@trungnghia294",
+      "linkedin": "https://www.linkedin.com/in/tnghia294/",
+      "mail": "mailto:trungnghia294@gmail.com"
+    }
+  },
+  "siteConfiguration": {
+    "logo": { "text": "" },
+    "navigation": {
+      "header": [
+        { "label": "About", "url": "/#about" },
+        { "label": "Experience", "url": "/#experience" },
+        { "label": "Education", "url": "/#education" },
+        { "label": "Certifications", "url": "/#certification" },
+        { "label": "Projects", "url": "/#features" },
+        { "label": "Contact", "url": "/#contact" }
+      ],
+      "ctaButton": {
+        "openNewTab": true,
+        "label": "Resume",
+        "url": "/resume.pdf"
+      },
+      "footer": [
+        { "label": " ", "url": "/privacy" },
+        { "label": " ", "url": "/imprint" }
+      ]
+    },
+    "featureToggles": {
+      "useDarkModeAsDefault": false,
+      "useDarkModeBasedOnUsersPreference": true,
+      "useCookieBar": false
+    }
+  }
+}

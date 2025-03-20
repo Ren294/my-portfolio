@@ -1,0 +1,13 @@
+{
+  "name": "Nguyen Trung Nghia (Ren)",
+  "email": "trungnghia294@mail.com",
+  "description": "Thank you for visiting my personal portfolio website. Connect with me over socials.",
+  "image": {
+    "src": "../../images/lego-dummy.jpg",
+    "alt": "Ren's Photo"
+  },
+  "socialProfiles": {
+    "from": ["LinkedIn", "Github", "Mail"],
+    "showIcons": true
+  }
+}

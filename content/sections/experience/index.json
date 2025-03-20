@@ -1,0 +1,21 @@
+{
+  "sectionId": "experience",
+  "title": "Experience",
+  "description": "My professional experience and work history",
+  "items": [
+    {
+      "title": "Data Engineering Mentor",
+      "company": "TechData.AI",
+      "period": "July 2024 – Dec 2024",
+      "description": "Led development of key features and maintained existing systems",
+      "technologies": ["React", "Node.js", "TypeScript"]
+    },
+    {
+      "title": "Junior Developer",
+      "company": "Another Company",
+      "period": "2018 - 2020",
+      "description": "Developed and maintained web applications",
+      "technologies": ["JavaScript", "HTML", "CSS"]
+    }
+  ]
+} 
