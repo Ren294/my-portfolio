@@ -24,7 +24,7 @@
         { "label": "Education", "url": "/#education" },
         { "label": "Certifications", "url": "/#certification" },
         { "label": "Projects", "url": "/#features" },
-        { "label": "Contact", "url": "/#contact" }
+        { "label": "Contact", "url": "/#github" }
       ],
       "ctaButton": {
         "openNewTab": true,
