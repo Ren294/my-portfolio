@@ -1,6 +1,6 @@
 import AWS from '../../content/images/channels4_profile.jpg';
 import SIC from '../../content/images/SIC.jpeg';
-import IBM from '../../content/images/IBM.jpeg';
+import IBM from '../../content/images/ibm.jpeg';
 import UTE from '../../content/images/UTE.jpg';
 import tda from '../../content/images/techdataai.jpeg';
 
