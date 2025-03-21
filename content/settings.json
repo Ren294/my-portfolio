@@ -29,7 +29,7 @@
       "ctaButton": {
         "openNewTab": true,
         "label": "Resume",
-        "url": "/resume.pdf"
+        "url": "https://www.linkedin.com/in/tnghia294/"
       },
       "footer": [
         { "label": " ", "url": "/privacy" },
@@ -38,7 +38,7 @@
     },
     "featureToggles": {
       "useDarkModeAsDefault": false,
-      "useDarkModeBasedOnUsersPreference": true,
+      "useDarkModeBasedOnUsersPreference": false,
       "useCookieBar": false
     }
   }
