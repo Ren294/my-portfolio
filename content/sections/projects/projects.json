@@ -41,7 +41,7 @@
         "category": "PERSONAL PROJECT",
         "title": "Log Analysis Project",
         "description": "Built a scalable, fault-tolerant log analytics pipeline based on the Lambda architecture, capable of processing and analyzing NASA web server logs in both real-time and batch modes. Provides comprehensive log insights, anomaly detection, and historical trend analysis to enhance system monitoring and security.",
-        "tags": ["Content Integration", "Ready-2-Deploy"],
+        "tags": ["Lambda Architecture"],
         "image": {
           "src": "../../images/log.jpeg",
           "alt": "Github",
@@ -59,7 +59,7 @@
         "category": "PERSONAL PROJECT",
         "title": "COVID-19 Data Processing",
         "description": "Engineered a real-time COVID-19 data pipeline for efficient data ingestion, transformation, and visualization, enabling public health officials to track key metrics. Integrates streaming and batch processing to deliver up-to-date insights via interactive dashboards and automated reports.",
-        "tags": ["Content Integration", "Ready-2-Deploy"],
+        "tags": ["Lambda Architecture"],
         "image": {
           "src": "../../images/covid.jpeg",
           "alt": "Github",
