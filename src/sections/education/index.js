@@ -40,7 +40,7 @@ const Education = () => (
           display: flex;
           align-items: center;
           gap: 20px;
-          background: white;
+          background: transparent;
           padding: 20px;
           border-radius: 10px;
           box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
@@ -91,6 +91,25 @@ const Education = () => (
           padding-left: 20px;
           list-style: disc;
         }
+          @media (max-width: 768px) {
+      .education-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 15px;
+      }
+      .education-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+      }
+      .education-content {
+        text-align: center;
+      }
+      .achievements {
+        text-align: left;
+      }
+    }
       `}</style>
     </Section>
 );

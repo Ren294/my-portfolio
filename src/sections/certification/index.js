@@ -33,6 +33,7 @@ const Certification = () => (
 
   {/* CSS cập nhật */}
   <style jsx>{`
+    
     .certificate-container {
       display: flex;
       align-items: center;
@@ -42,7 +43,7 @@ const Certification = () => (
       box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
       flex-wrap: wrap; /* Đảm bảo khi màn hình nhỏ, nội dung sẽ tự động xuống dưới */
     }
-
+    
     .certificate-image {
       width: 270px;
       height: 220px;
@@ -100,22 +101,36 @@ const Certification = () => (
       color: #fff;
     }
 
-    /* Đáp ứng khi màn hình nhỏ */
     @media (max-width: 768px) {
       .certificate-container {
-        flex-direction: column; /* Nội dung xuống dưới ảnh */
-        align-items: center;
-        text-align: center;
+        flex-direction: column;
+        text-align: left;
+        padding: 15px;
       }
 
       .certificate-image {
-        margin-bottom: 15px; /* Giữ khoảng cách giữa ảnh và nội dung */
         width: 200px;
-        height: 150px;
+        margin-bottom: 10px;
       }
 
       .certificate-content {
         min-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .certificate-container {
+        padding: 10px;
+      }
+
+      .certificate-image {
+        width: 180px;
+        height : 100px
+      }
+
+      .certificate-button {
+        font-size: 12px;
+        padding: 6px 10px;
       }
     }
   `}</style>
