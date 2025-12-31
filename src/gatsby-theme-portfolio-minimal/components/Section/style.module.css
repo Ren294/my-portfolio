@@ -32,7 +32,7 @@
     height: 100%;
     max-width: 1200px;
     margin: 0 auto 4rem auto;
-    padding: 4rem var(--page-padding);
+    padding: 4rem 2.5rem;
 }
 
 @media (max-width: 768px) {
@@ -41,7 +41,13 @@
     }
 
     .ContentWrapper {
-        padding: 3rem var(--page-padding);
+        padding: 3rem 1.5rem;
         margin: 0 auto 3rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .ContentWrapper {
+        padding: 2rem 1rem;
     }
 }
