@@ -10,11 +10,11 @@
   },
   "title": "I'm NGUYEN TRUNG NGHIA",
   "subtitle": {
-    "prefix": "I am into",
-    "highlight": " Big Data Engineering | MLOps",
-    "suffix": "."
+    "prefix": "I am a",
+    "highlight": " Data Engineer | DataOps | MLOps",
+    "suffix": ""
   },
-  "description": "A data engineer eager to build scalable data systems and apply AI to solve real-world challenges. I am passionate about data, machine learning, and cloud technologies.",
+  "description": "Data Engineer with 1+ year of production experience building and optimizing large-scale data pipelines for healthcare and marketing analytics. Specialized in orchestrating complex ETL workflows with Apache Airflow on GCP, developing RAG-based conversational AI systems, and designing multi-agent architectures for business automation.",
   "socialProfiles": {
     "from": ["LinkedIn", "Github", "Mail"],
     "showIcons": true

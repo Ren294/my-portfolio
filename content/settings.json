@@ -1,12 +1,12 @@
 {
   "siteMetadata": {
     "language": "en",
-    "title": "Gatsby Starter for Portfolio Minimal",
-    "titleTemplate": "%s · Portfolio Minimal",
-    "description": "A Gatsby Starter Project to easily get started with Portfolio Minimal theme.",
+    "title": "Nguyen Trung Nghia - Data Engineer Portfolio",
+    "titleTemplate": "%s · Nguyen Trung Nghia",
+    "description": "Data Engineer with 1+ year of production experience building and optimizing large-scale data pipelines for healthcare and marketing analytics.",
     "author": "Nguyen Trung Nghia",
     "avatar": "../content/images/lego-dummy.jpg",
-    "bio": "This biography will be used in the footer area of an article and can contain some more details about the author.",
+    "bio": "Data Engineer | DataOps | MLOps - Specialized in Apache Airflow, GCP, RAG-based AI systems, and multi-agent architectures. Based in Ho Chi Minh City, Vietnam.",
     "social": {
       "behance": "https://behance.com",
       "github": "https://github.com/Ren294",

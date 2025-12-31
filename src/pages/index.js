@@ -14,9 +14,12 @@ import ExperienceSection from "../sections/experience";
 import EducationSection from "../sections/education";
 import CertificationSection from "../sections/certification";
 import { theme } from "../styles/theme";
+import { GlobalStyles } from "../styles/globalStyles";
+
 export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <Seo title="Ren's Portfolio" />
       <Page useSplashScreenAnimation>
         <HeroSection sectionId="hero" />

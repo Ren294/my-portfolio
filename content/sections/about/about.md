@@ -4,9 +4,11 @@ imageAlt: "RenPhoto"
 ---
 ## I'm Ren
 
-**Big Data | Machine Learning**
+**Data Engineer | DataOps | MLOps**
 
-I am a highly motivated Data Engineer with a strong ability to design and build robust, scalable data pipelines. Passionate about big data technologies, cloud computing, and real-time data processing, I have gained hands-on experience through multiple personal projects. I aspire to thrive in dynamic and challenging environments, leveraging my expertise to collaborate with AI and BI teams in developing scalable, data-driven solutions that drive business innovation. Continuously expanding my knowledge in Machine Learning and AI, I aim to bridge the gap between data engineering and advanced analytics, enabling smarter and more efficient data-driven decision-making. 🚀
+Data Engineer with 1+ year of production experience building and optimizing large-scale data pipelines for healthcare and marketing analytics across multiple Southeast Asian markets. Specialized in orchestrating complex ETL workflows with Apache Airflow on GCP, developing RAG-based conversational AI systems, and designing multi-agent architectures for business automation.
 
-- **Email**: trungnghia294@gmail.com
-- **Place**: HoChiMinh City, Vietnam
+Strong foundation in data platform engineering, cross-functional collaboration, and delivering measurable business impact through modern data stack and cloud-native technologies. Continuously expanding expertise in Machine Learning and AI to bridge the gap between data engineering and advanced analytics.
+
+- **Email** trungnghia294@gmail.com
+- **Place** Ho Chi Minh City, Vietnam

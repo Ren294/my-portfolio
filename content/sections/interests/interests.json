@@ -4,56 +4,70 @@
       "label": "Python",
       "image": {
         "src": "../../images/python.png",
-        "alt": ""
+        "alt": "Python Programming"
+      }
+    },
+    {
+      "label": "Apache Airflow",
+      "image": {
+        "src": "../../images/airflow.png",
+        "alt": "Apache Airflow"
+      }
+    },
+    {
+      "label": "Google Cloud Platform",
+      "image": {
+        "src": "../../images/gcp.png",
+        "alt": "Google Cloud Platform"
+      }
+    },
+    {
+      "label": "Apache Spark",
+      "image": {
+        "src": "../../images/spark.png",
+        "alt": "Apache Spark"
+      }
+    },
+    {
+      "label": "Apache Kafka",
+      "image": {
+        "src": "../../images/kafka.png",
+        "alt": "Apache Kafka"
       }
     },
     {
       "label": "Docker",
       "image": {
         "src": "../../images/docker.png",
-        "alt": ""
+        "alt": "Docker"
       }
     },
     {
-      "label": "Machine Learning",
+      "label": "Kubernetes",
+      "image": {
+        "src": "../../images/kubernetes.png",
+        "alt": "Kubernetes"
+      }
+    },
+    {
+      "label": "BigQuery",
+      "image": {
+        "src": "../../images/bigquery.png",
+        "alt": "Google BigQuery"
+      }
+    },
+    {
+      "label": "PostgreSQL",
+      "image": {
+        "src": "../../images/postgresql.png",
+        "alt": "PostgreSQL"
+      }
+    },
+    {
+      "label": "RAG & AI",
       "image": {
         "src": "../../images/ml.jpg",
-        "alt": ""
-      }
-    },
-    {
-      "label": "Medium Integration",
-      "image": {
-        "src": "../../images/medium.png",
-        "alt": ""
-      }
-    },
-    {
-      "label": "Animations",
-      "image": {
-        "src": "../../images/gem-stone.png",
-        "alt": ""
-      }
-    },
-    {
-      "label": "PWA (Offline Support)",
-      "image": {
-        "src": "../../images/mobile-phone.png",
-        "alt": ""
-      }
-    },
-    {
-      "label": "Modern Tech-Stack",
-      "image": {
-        "src": "../../images/gatsby.png",
-        "alt": ""
-      }
-    },
-    {
-      "label": "Blazing Fast",
-      "image": {
-        "src": "../../images/high-voltage.png",
-        "alt": ""
+        "alt": "RAG and AI Systems"
       }
     }
   ],

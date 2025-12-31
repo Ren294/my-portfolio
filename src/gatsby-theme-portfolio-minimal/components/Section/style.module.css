@@ -1,0 +1,47 @@
+.Section {
+    width: 100%;
+    height: auto;
+    background: var(--background-color);
+    scroll-margin-top: 60px;
+}
+
+.Section .Heading {
+    margin: 0 0 3rem 0;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #0F172A;
+    position: relative;
+    display: inline-block;
+}
+
+.Section .Heading::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #000000;
+    border-radius: 9999px;
+}
+
+.ContentWrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+    padding: 4rem var(--page-padding);
+}
+
+@media (max-width: 768px) {
+    .Section .Heading {
+        font-size: 1.5rem;
+    }
+
+    .ContentWrapper {
+        padding: 3rem var(--page-padding);
+        margin: 0 auto 3rem auto;
+    }
+}
