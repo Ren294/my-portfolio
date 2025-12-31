@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  padding: ${({ theme }) => theme.spacing.xxl} 2.5rem;
+  padding: 4rem 2.5rem;
   overflow: hidden;
-  background: ${({ theme }) => theme.colors.background1};
+  background: #FFFFFF;
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   position: relative;
 
   @media (max-width: 768px) {
-    padding: ${({ theme }) => theme.spacing.xl} 1.5rem;
+    padding: 3rem 1.5rem;
   }
 
   @media (max-width: 480px) {
-    padding: ${({ theme }) => theme.spacing.lg} 1rem;
+    padding: 2rem 1rem;
   }
 `;
 
