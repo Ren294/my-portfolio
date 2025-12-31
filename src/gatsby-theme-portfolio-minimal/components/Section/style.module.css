@@ -30,7 +30,7 @@
 .ContentWrapper {
     width: 100%;
     height: 100%;
-    max-width: 62.5rem;
+    max-width: 1200px;
     margin: 0 auto 8rem auto;
     padding: 0 2.5rem;
 }
