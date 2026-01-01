@@ -288,10 +288,19 @@
 @media (max-width: 991px) {
     .Project {
         padding: 0;
+        margin-bottom: 3rem;
     }
 
     .Project .Details {
         padding: 1.5rem;
+    }
+
+    .Project .Details .Title {
+        font-size: 1.25rem;
+    }
+
+    .Project .Details p {
+        font-size: 0.9rem;
     }
 
     .Project .ProjectImageWrapper {
@@ -300,5 +309,75 @@
         margin: 1rem;
         margin-bottom: 0;
         width: calc(100% - 2rem);
+    }
+}
+
+@media (max-width: 640px) {
+    .Project {
+        margin-bottom: 2.5rem;
+    }
+
+    .Project .Details {
+        padding: 1.25rem;
+    }
+
+    .Project .Details .Category {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+    }
+
+    .Project .Details .Title {
+        font-size: 1.15rem;
+        margin-top: 1rem;
+    }
+
+    .Project .Details p {
+        font-size: 0.875rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .Project .Details .Tags span u {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+
+    .Project .Details .Links a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .Project .Details .Links svg {
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+
+    .Project .ProjectImageWrapper {
+        height: 12rem;
+        margin: 0.75rem;
+        width: calc(100% - 1.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .Project {
+        margin-bottom: 2rem;
+    }
+
+    .Project .Details {
+        padding: 1rem;
+    }
+
+    .Project .Details .Title {
+        font-size: 1.05rem;
+        line-height: 1.4;
+    }
+
+    .Project .Details p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    .Project .ProjectImageWrapper {
+        height: 10rem;
     }
 }
