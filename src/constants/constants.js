@@ -10,7 +10,7 @@ export const experienceData = [
         title: "Hello Health Group",
         image: HHG,
         company: "Data Engineer",
-        period: "Apr 2025 - Feb 2026",
+        period: "Mar 2025 - Feb 2026",
         description: "Building and optimizing large-scale data pipelines for healthcare and marketing analytics across 6 Southeast Asian markets. Specialized in orchestrating complex ETL workflows with Apache Airflow on GCP, developing RAG-based conversational AI systems, and designing multi-agent architectures for business automation.",
         technologies: ["Apache Airflow", "GCP", "BigQuery", "Python", "Docker", "Kubernetes", "RAG", "Multi-Agent AI"],
         link: "https://www.facebook.com/share/p/194g4gJ1NN/"
@@ -19,7 +19,7 @@ export const experienceData = [
         title: "Amazon Web Services (AWS)",
         image: AWS,
         company: "Data Engineer Internship",
-        period: "Feb 2025 - Apr 2025",
+        period: "Jan 2025 - Mar 2025",
         description: "Completed AWS First Cloud Journey training program, studying core AWS services including Amazon EC2, S3, RDS, IAM, Lambda, and VPC through hands-on labs and practical exercises.",
         technologies: ["AWS", "EC2", "S3", "RDS", "Lambda", "IAM"],
         link: "https://www.facebook.com/share/p/194g4gJ1NN/"
