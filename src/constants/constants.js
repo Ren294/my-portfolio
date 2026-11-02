@@ -4,8 +4,18 @@ import IBM from '../../content/images/ibm.jpeg';
 import UTE from '../../content/images/UTE.jpg';
 import tda from '../../content/images/techdataai.jpeg';
 import HHG from '../../content/images/hhg.png';
+import HomeCredit from '../../content/images/homecredit.svg';
 
 export const experienceData = [
+    {
+        title: "Home Credit Vietnam",
+        image: HomeCredit,
+        company: "Customer Data Engineer",
+        period: "Feb 2026 - Present",
+        description: "Building core components of the Unified Customer Profile (UCP), a near-real-time customer data platform that streams GA4 digital events and lead submissions from Kafka through SAS ESP into Oracle, with PL/SQL identity resolution and a metadata-driven Attribute Query Engine powering real-time campaign targeting in SAS CI and RTDM. Developing Oracle PL/SQL CRM campaign procedures and the crm-procedure-builder tool to auto-generate stored procedures, configs, and documentation. Designed a configuration-driven GA4 event anomaly detection platform on BigQuery, Dataform, and Cloud Run, reducing event monitoring time by 90%.",
+        technologies: ["Oracle PL/SQL", "Apache Kafka", "SAS ESP", "SAS RTDM", "BigQuery", "Dataform", "Cloud Run", "Power Automate"],
+        link: ""
+    },
     {
         title: "Hello Health Group",
         image: HHG,

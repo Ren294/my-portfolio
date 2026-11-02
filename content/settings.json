@@ -3,10 +3,10 @@
     "language": "en",
     "title": "Nguyen Trung Nghia - Data Engineer Portfolio",
     "titleTemplate": "%s · Nguyen Trung Nghia",
-    "description": "Data Engineer with 1+ year of production experience building and optimizing large-scale data pipelines for healthcare and marketing analytics.",
+    "description": "Data Engineer with 2 years of production experience building and optimizing large-scale data pipelines across healthcare, marketing analytics, and consumer finance.",
     "author": "Nguyen Trung Nghia",
     "avatar": "../content/images/lego-dummy.jpg",
-    "bio": "Data Engineer | DataOps | MLOps - Specialized in Apache Airflow, GCP, RAG-based AI systems, and multi-agent architectures. Based in Ho Chi Minh City, Vietnam.",
+    "bio": "Data Engineer | DataOps | MLOps - Specialized in Apache Airflow, GCP, Oracle PL/SQL, Kafka, SAS ESP/RTDM, RAG-based AI systems, and multi-agent architectures. Based in Ho Chi Minh City, Vietnam.",
     "social": {
       "behance": "https://behance.com",
       "github": "https://github.com/Ren294",

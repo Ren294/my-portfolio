@@ -7,12 +7,12 @@ import {
   HeroSection,
   InterestsSection,
   Page,
-  ProjectsSection,
   Seo,
 } from "gatsby-theme-portfolio-minimal";
 import ExperienceSection from "../sections/experience";
 import EducationSection from "../sections/education";
 import CertificationSection from "../sections/certification";
+import ProjectsSection from "../sections/projects";
 import { theme } from "../styles/theme";
 import { GlobalStyles } from "../styles/globalStyles";
 
@@ -29,7 +29,7 @@ export default function IndexPage() {
         <ExperienceSection sectionId="experience" heading="EXPERIENCE" />
         <EducationSection sectionId="education" heading="EDUCATION" />
         <CertificationSection sectionId="certification" heading="CERTIFICATIONS" />
-        <ProjectsSection sectionId="features" heading="PROJECTS MADE" />
+        <ProjectsSection heading="PROJECTS MADE" />
         <ContactSection sectionId="github" heading="CONTACT ME" />
       </Page>
     </ThemeProvider>

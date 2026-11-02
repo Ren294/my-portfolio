@@ -287,12 +287,26 @@
 
 @media (max-width: 991px) {
     .Project {
+        width: min(26rem, calc(100% - 3rem));
+        max-width: none;
+        margin: 0;
         padding: 0;
-        margin-bottom: 3rem;
+        justify-content: flex-start;
+        scroll-snap-align: start;
+    }
+
+    .Project:not(:last-child)::after {
+        display: none;
     }
 
     .Project .Details {
+        flex: 1;
+        max-width: none;
         padding: 1.5rem;
+    }
+
+    .Project .Details .Links {
+        margin-top: auto;
     }
 
     .Project .Details .Title {
@@ -313,10 +327,6 @@
 }
 
 @media (max-width: 640px) {
-    .Project {
-        margin-bottom: 2.5rem;
-    }
-
     .Project .Details {
         padding: 1.25rem;
     }
@@ -360,7 +370,7 @@
 
 @media (max-width: 480px) {
     .Project {
-        margin-bottom: 2rem;
+        width: calc(100% - 2.5rem);
     }
 
     .Project .Details {

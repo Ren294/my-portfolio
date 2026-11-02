@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, SectionDivider, SectionTitle } from "../../styles/GlobalComponents";
+import { Section, SectionTitle } from "../../styles/GlobalComponents";
 import { experienceData } from "../../constants/constants";
 
 const Experience = () => (
@@ -76,6 +76,7 @@ const Experience = () => (
         .timeline-item:nth-child(1) { animation-delay: 0.1s; }
         .timeline-item:nth-child(2) { animation-delay: 0.2s; }
         .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
 
         @keyframes slideIn {
           from {
