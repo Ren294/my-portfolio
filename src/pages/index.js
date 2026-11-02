@@ -13,6 +13,8 @@ import ExperienceSection from "../sections/experience";
 import EducationSection from "../sections/education";
 import CertificationSection from "../sections/certification";
 import ProjectsSection from "../sections/projects";
+import Reveal from "../components/Reveal";
+import ScrollProgress from "../components/ScrollProgress";
 import { theme } from "../styles/theme";
 import { GlobalStyles } from "../styles/globalStyles";
 
@@ -22,15 +24,28 @@ export default function IndexPage() {
       <GlobalStyles />
       <Seo title="Ren's Portfolio" />
       <Page useSplashScreenAnimation>
+        <ScrollProgress />
         <HeroSection sectionId="hero" />
         {/* <ArticlesSection sectionId="articles" heading="Latest Articles" sources={['Medium']} /> */}
-        <AboutSection sectionId="about" heading="ABOUT ME" />
+        <Reveal>
+          <AboutSection sectionId="about" heading="ABOUT ME" />
+        </Reveal>
         {/* <InterestsSection sectionId="details" heading="Details" /> */}
-        <ExperienceSection sectionId="experience" heading="EXPERIENCE" />
-        <EducationSection sectionId="education" heading="EDUCATION" />
-        <CertificationSection sectionId="certification" heading="CERTIFICATIONS" />
-        <ProjectsSection heading="PROJECTS MADE" />
-        <ContactSection sectionId="github" heading="CONTACT ME" />
+        <Reveal>
+          <ExperienceSection sectionId="experience" heading="EXPERIENCE" />
+        </Reveal>
+        <Reveal>
+          <EducationSection sectionId="education" heading="EDUCATION" />
+        </Reveal>
+        <Reveal>
+          <CertificationSection sectionId="certification" heading="CERTIFICATIONS" />
+        </Reveal>
+        <Reveal>
+          <ProjectsSection heading="PROJECTS MADE" />
+        </Reveal>
+        <Reveal>
+          <ContactSection sectionId="github" heading="CONTACT ME" />
+        </Reveal>
       </Page>
     </ThemeProvider>
   );

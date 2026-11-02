@@ -84,6 +84,46 @@ const Education = () => (
           align-items: center;
           justify-content: center;
           transition: all 0.3s ease;
+          animation: educationPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s backwards;
+        }
+
+        .education-content > * {
+          animation: educationFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+        }
+
+        .education-content > *:nth-child(1) { animation-delay: 0.45s; }
+        .education-content > *:nth-child(2) { animation-delay: 0.53s; }
+        .education-content > *:nth-child(3) { animation-delay: 0.61s; }
+        .education-content > *:nth-child(4) { animation-delay: 0.69s; }
+        .education-content > *:nth-child(5) { animation-delay: 0.77s; }
+
+        @keyframes educationPop {
+          from {
+            opacity: 0;
+            transform: scale(0.8) rotate(-4deg);
+          }
+          to {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+          }
+        }
+
+        @keyframes educationFadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(14px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .education-image,
+          .education-content > * {
+            animation: none;
+          }
         }
 
         .education-item:hover .education-image {

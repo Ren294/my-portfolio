@@ -1,13 +1,14 @@
 import React from "react";
 import { Section, SectionTitle } from "../../styles/GlobalComponents";
 import { experienceData } from "../../constants/constants";
+import Reveal from "../../components/Reveal";
 
 const Experience = () => (
 <Section id="experience">
       <SectionTitle>EXPERIENCE</SectionTitle>
       <div className="timeline">
         {experienceData.map((item, index) => (
-          <div className="timeline-item" key={index}>
+          <Reveal className="timeline-item" variant="left" delay={150} key={index}>
             <div className="timeline-dot" />
             <div className="timeline-content">
               <div className="content-header">
@@ -41,7 +42,7 @@ const Experience = () => (
                 </a>
               )}
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
 
@@ -63,6 +64,13 @@ const Experience = () => (
           width: 3px;
           background: linear-gradient(180deg, #000 0%, #4B5563 50%, #E5E7EB 100%);
           border-radius: 999px;
+          transform: scaleY(0);
+          transform-origin: top;
+          transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s;
+        }
+
+        .reveal.is-revealed .timeline::before {
+          transform: scaleY(1);
         }
 
         .timeline-item {
@@ -70,23 +78,10 @@ const Experience = () => (
           align-items: flex-start;
           margin-bottom: 56px;
           position: relative;
-          animation: slideIn 0.6s ease-out backwards;
         }
 
-        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
-        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
-        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
-        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
-
-        @keyframes slideIn {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
+        .timeline-item:not(.is-revealed) .timeline-dot {
+          transform: scale(0);
         }
 
         .timeline-dot {
@@ -100,7 +95,7 @@ const Experience = () => (
           border: 4px solid white;
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 0 0 4px rgba(0, 0, 0, 0.03);
           z-index: 2;
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         .timeline-item:hover .timeline-dot {
@@ -314,6 +309,14 @@ const Experience = () => (
 
         .btn:hover span {
           color: #fff;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .timeline::before,
+          .timeline-item:not(.is-revealed) .timeline-dot {
+            transform: none;
+            transition: none;
+          }
         }
 
         @media (max-width: 768px) {
