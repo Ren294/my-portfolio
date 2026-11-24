@@ -5,7 +5,7 @@
 */
 .dock {
   --dock-h: 100px;
-  --grow-max: 56px;
+  --grow-max: clamp(0px, calc((100svh - 600px) * 0.4), 56px); /* the arc only swells when there is room */
   --row-h: 48px; /* button height */
   --gap: 10px;
   --top0: 30px; /* top of the button row inside the dock */
@@ -124,7 +124,7 @@
 @media (max-width: 700px) {
   .dock {
     --dock-h: 92px;
-    --grow-max: 44px;
+    --grow-max: clamp(0px, calc((100svh - 560px) * 0.4), 44px);
     --row-h: 44px;
     --gap: 8px;
     --top0: 26px;

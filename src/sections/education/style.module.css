@@ -26,12 +26,13 @@
 
 /* Education row: header like Experience (period on the right), notes underneath */
 .eduRow {
+  --logo: 56px;
   display: block;
 }
 
 .head {
   display: grid;
-  grid-template-columns: 44px 1fr auto;
+  grid-template-columns: var(--logo) 1fr auto;
   align-items: center;
   gap: var(--s16);
 }
@@ -50,7 +51,7 @@
 
 .eduNotes {
   margin-top: var(--s14);
-  padding-left: 60px; /* aligns with the title, past the 44px logo + gap */
+  padding-left: calc(var(--logo) + var(--s16)); /* aligns with the title, past the logo + gap */
 }
 
 .main {
@@ -86,6 +87,9 @@ ul.notes {
 }
 
 @media (max-width: 640px) {
+  .eduRow {
+    --logo: 48px;
+  }
   .head {
     align-items: start;
   }

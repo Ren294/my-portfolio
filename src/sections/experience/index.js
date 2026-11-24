@@ -45,7 +45,7 @@ const Row = ({ item, index }) => {
   return (
     <Reveal as="li" className={s.row} delay={index * 60} data-expandable={clamped} onClick={toggle}>
       <div className={s.head}>
-        <Logo file={item.logo} alt="" size={44} />
+        <Logo file={item.logo} alt="" size="var(--logo)" />
         <div className={s.titles}>
           <h3 className={s.role}>{item.role}</h3>
           <p className={s.company}>{item.company}</p>

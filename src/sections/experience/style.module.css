@@ -5,6 +5,7 @@
 }
 
 .row {
+  --logo: 56px;
   padding: var(--s30);
   border: 1px solid var(--hairline);
   border-radius: var(--r-card);
@@ -18,7 +19,7 @@
 
 .head {
   display: grid;
-  grid-template-columns: 44px 1fr auto;
+  grid-template-columns: var(--logo) 1fr auto;
   align-items: center;
   gap: var(--s16);
 }
@@ -87,7 +88,7 @@
 
 .body {
   margin-top: var(--s14);
-  padding-left: 60px; /* aligns with the title, past the 44px logo + gap */
+  padding-left: calc(var(--logo) + var(--s16)); /* aligns with the title, past the logo + gap */
 }
 
 .desc {
@@ -133,6 +134,7 @@
 
 @media (max-width: 640px) {
   .row {
+    --logo: 48px;
     padding: var(--s20);
   }
   .head {

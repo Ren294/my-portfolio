@@ -4,15 +4,16 @@ import { useLogos } from "../../hooks/useLogos";
 import * as s from "./style.module.css";
 
 // Round logo / avatar. Decorative by default (the company or school name sits beside it).
+// `size` is a number of px, or any CSS length (e.g. "var(--logo)") so it can follow a breakpoint.
 const Logo = ({ file, alt = "", size = 44, className = "" }) => {
   const logos = useLogos();
   const node = logos[file];
   const sharp = node && node.childImageSharp;
   // sizes above 64px use the larger rendition so big badges stay crisp
-  const image = sharp && (size > 64 && sharp.large ? sharp.large : sharp.gatsbyImageData);
+  const image = sharp && (typeof size === "number" && size > 64 && sharp.large ? sharp.large : sharp.gatsbyImageData);
 
   return (
-    <span className={`${s.logo} ${className}`.trim()} style={{ "--size": `${size}px` }}>
+    <span className={`${s.logo} ${className}`.trim()} style={{ "--size": typeof size === "number" ? `${size}px` : size }}>
       {image ? (
         <GatsbyImage image={image} alt={alt} style={{ width: "100%", height: "100%" }} imgStyle={{ objectFit: "cover" }} />
       ) : node && node.publicURL ? (

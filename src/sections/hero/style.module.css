@@ -4,8 +4,10 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 150px var(--gutter) 80px;
-  min-height: min(100svh, 880px);
+  /* The arc dock owns the bottom of the first screen (100px arc + whatever it swells by at the
+     top of the page + breathing room), so the hero centres its content in the space above it. */
+  padding: 56px var(--gutter) calc(128px + clamp(0px, calc((100svh - 600px) * 0.4), 56px));
+  min-height: min(100svh, 940px);
   display: flex;
   align-items: center;
 }
@@ -93,7 +95,8 @@
   width: 100%;
   max-width: 1240px;
   margin: 0 auto;
-  min-height: 620px;
+  /* the padding is the strip the floating cards live in, above and below the copy */
+  padding: 48px 0 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -198,12 +201,12 @@
 
 /* Desktop: cards and tags orbit the headline; they sit beside the short first line
    ("I'm Ren.") and around the sub-line / CTA. */
-.fProfile  { left: 2%;   top: 17%; }
-.fPipeline { right: 1%;  top: 4%; width: 340px; }
+.fProfile  { left: 2%;   top: 4%; }
+.fPipeline { right: 1%;  top: 0; width: 340px; }
 .fPlace    { left: 1%;   top: 54%; }
-.fTagA     { left: 15%;  top: 80%; }
-.fTagB     { right: 15%; top: 66%; }
-.fTagC     { left: 63%;  top: 88%; }
+.fTagA     { left: 15%;  top: 83%; }
+.fTagB     { right: 15%; top: 73%; }
+.fTagC     { left: 63%;  top: 90%; }
 
 @keyframes rise {
   from { opacity: 0; transform: translate3d(0, 22px, 0) scale(0.97); }
@@ -364,7 +367,8 @@
 /* ---- Tablet & mobile: cards settle into a flow row under the CTA ---- */
 @media (min-width: 640px) {
   .headline {
-    font-size: clamp(48px, 7.2vw, 96px);
+    /* also capped by the screen height, so the CTA always clears the arc on short laptops */
+    font-size: min(clamp(48px, 7.2vw, 96px), max(56px, 12.5svh));
   }
   .line {
     display: block;
@@ -374,12 +378,12 @@
 @media (max-width: 1180px) {
   .hero {
     align-items: flex-start;
-    padding-top: 140px;
+    padding-top: clamp(96px, 14svh, 140px);
     padding-bottom: 70px;
     min-height: 0;
   }
   .inner {
-    min-height: 0;
+    padding: 0;
   }
   .cards {
     position: static;

@@ -1,6 +1,7 @@
 import React from "react";
 import Section from "../../components/Section";
 import Reveal from "../../components/Reveal";
+import Portrait from "./Portrait";
 import { aboutData, profile } from "../../constants/constants";
 import { useSiteSettings } from "../../hooks/useSiteSettings";
 import * as s from "./style.module.css";
@@ -15,6 +16,7 @@ const About = () => {
 
   return (
     <Section id="about" title="About">
+      <div className={s.layout}>
       <div className={s.column}>
         <Reveal>
           <p className={s.eyebrow}>{aboutData.eyebrow}</p>
@@ -41,6 +43,8 @@ const About = () => {
             </div>
           </dl>
         </Reveal>
+      </div>
+      <Portrait />
       </div>
     </Section>
   );

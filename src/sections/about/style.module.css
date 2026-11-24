@@ -1,3 +1,27 @@
+/* Editorial text column on the left, a quiet portrait on the right (it comes first on small screens) */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s30);
+}
+
+.layout > :global(figure) {
+  order: -1;
+  width: clamp(150px, 28vw, 220px);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) clamp(220px, 26vw, 290px);
+    column-gap: var(--s40);
+    align-items: start;
+  }
+  .layout > :global(figure) {
+    order: 0;
+    width: auto;
+  }
+}
+
 /* Editorial text column — left-aligned, no card grid */
 .column {
   max-width: 680px;

@@ -27,8 +27,8 @@ export const useLogos = () => {
           publicURL
           childImageSharp {
             gatsbyImageData(
-              width: 88
-              height: 88
+              width: 120
+              height: 120
               layout: FIXED
               placeholder: NONE
               quality: 90

@@ -15,7 +15,7 @@ const Education = () => (
           <li key={item.degree} className={`${s.row} ${s.eduRow}`}>
             {/* same header layout as Experience: logo | degree + school | period on the right */}
             <div className={s.head}>
-              <Logo file={item.logo} alt="" size={44} />
+              <Logo file={item.logo} alt="" size="var(--logo)" />
               <div className={s.main}>
                 <h4 className={s.name}>{item.degree}</h4>
                 <p className={s.sub}>{item.school}</p>
