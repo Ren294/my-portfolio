@@ -1,0 +1,202 @@
+.wrap {
+  margin-top: var(--s40);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s16);
+  margin-bottom: var(--s14);
+}
+
+.group {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+}
+
+/* round prev / next buttons (hidden on touch-width screens: swipe instead) */
+.controls {
+  display: none;
+  gap: var(--s10);
+}
+
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  box-shadow: var(--shadow-rest);
+  color: var(--ink);
+  cursor: pointer;
+  transition:
+    opacity 0.15s ease,
+    background-color 0.15s ease;
+}
+.arrow:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+@media (hover: hover) {
+  .arrow:not(:disabled):hover {
+    background: #f2f2f2;
+  }
+}
+
+/* scroll-snap row, kept exactly inside the content width like every other section.
+   (Vertical padding only leaves room for the card shadow.) */
+.scroller {
+  --card-w: 280px;
+  display: flex;
+  gap: var(--s14);
+  margin: -8px 0;
+  padding: 8px 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+/* each card sits in a revealed cell that owns the snap position and width */
+.cell {
+  display: flex;
+  flex: none;
+  width: var(--card-w);
+  scroll-snap-align: start;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-rest);
+  transition: background-color 0.15s ease;
+}
+
+/* keyboard focus ring drawn inside the card, so the scroller never clips it */
+.card:focus-visible {
+  outline-offset: -4px;
+}
+
+/* "illustration" area: the issuer logo, lit from above on a soft lime-to-sky wash
+   (the lime and sky accents from the palette, thinned right out) */
+.visual {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 2.2 / 1;
+  background:
+    radial-gradient(110% 90% at 50% 0%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 62%),
+    linear-gradient(135deg, rgba(242, 252, 179, 0.62), rgba(150, 208, 255, 0.38)),
+    #ffffff;
+}
+
+.badge {
+  display: inline-grid;
+  border-radius: var(--r-pill);
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.15s ease;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--s10);
+  padding: var(--s20);
+}
+
+.issuer {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap; /* on narrow cards the button drops below the date instead of breaking it */
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s10);
+  margin-top: auto;
+  padding-top: var(--s14);
+}
+
+.date {
+  font-size: 13px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* the one hover cue (same as Dia's): the card fills in, the logo grows a touch */
+@media (hover: hover) {
+  .card:hover {
+    background: #f2f2f2;
+  }
+  .card:hover .badge {
+    transform: scale(1.06);
+  }
+}
+
+@media (min-width: 600px) {
+  .controls {
+    display: flex;
+  }
+  .scroller {
+    --card-w: 380px;
+    gap: var(--s20);
+  }
+}
+
+@media (min-width: 1000px) {
+  .scroller {
+    --card-w: 440px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow,
+  .card,
+  .badge {
+    transition: none;
+  }
+  .card:hover .badge {
+    transform: none;
+  }
+}

@@ -1,0 +1,39 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s5);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s10);
+  padding: var(--s5) var(--s14) var(--s5) var(--s10);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: var(--tone, var(--lime));
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.dot[data-tone="sunglow"] { --tone: var(--sunglow); }
+.dot[data-tone="amber"] { --tone: var(--amber); }
+.dot[data-tone="sky"] { --tone: var(--sky); }
+.dot[data-tone="blue"] { --tone: var(--blue); }
+.dot[data-tone="silver"] { --tone: var(--silver); }
+.dot[data-tone="lime"] {
+  --tone: var(--lime);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.16);
+}

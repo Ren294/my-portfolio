@@ -1,0 +1,17 @@
+.logo {
+  flex: none;
+  width: var(--size, 44px);
+  height: var(--size, 44px);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  display: inline-grid;
+  place-items: center;
+}
+
+.contain {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}

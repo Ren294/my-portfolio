@@ -1,0 +1,28 @@
+/* the padding / negative margin pair gives descenders and serif overhangs room inside the mask */
+.word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 0.06em 0.08em 0.2em;
+  margin: -0.06em -0.08em -0.2em;
+}
+
+.inner {
+  display: inline-block;
+}
+
+.split[data-reveal="armed"] .inner {
+  transform: translate3d(0, 118%, 0);
+}
+
+.split[data-reveal="shown"] .inner {
+  transform: none;
+  transition: transform 1.1s var(--ease) calc(var(--split-delay, 0ms) + var(--i) * 80ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .split[data-reveal] .inner {
+    transform: none;
+    transition: none;
+  }
+}

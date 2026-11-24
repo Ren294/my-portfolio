@@ -1,0 +1,27 @@
+.section {
+  scroll-margin-top: 90px;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* Serif accent for section headings: Fraunces 600-650, tight tracking */
+.title {
+  margin-bottom: var(--s40);
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-weight: 620;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  text-wrap: balance;
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 36px;
+  }
+}

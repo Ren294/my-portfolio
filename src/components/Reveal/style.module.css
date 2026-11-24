@@ -1,0 +1,21 @@
+/* rise + fade, played once as the block scrolls into view */
+.reveal[data-reveal="armed"] {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0);
+}
+
+.reveal[data-reveal="shown"] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 1s var(--ease) var(--reveal-delay),
+    transform 1s var(--ease) var(--reveal-delay);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal[data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

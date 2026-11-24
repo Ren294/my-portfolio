@@ -1,0 +1,12 @@
+/* Whitespace is the main layout tool: 70-90px between sections */
+.main {
+  overflow-x: clip;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding-top: calc(var(--section-gap) * 0.6);
+  padding-bottom: var(--section-gap);
+}

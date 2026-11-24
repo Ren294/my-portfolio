@@ -1,0 +1,68 @@
+/* Editorial text column — left-aligned, no card grid */
+.column {
+  max-width: 680px;
+}
+
+.eyebrow {
+  margin-bottom: var(--s20);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--muted);
+}
+
+.lead {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.body {
+  margin-top: var(--s20);
+  color: var(--ink-soft);
+}
+
+/* Email / Place: two softly bordered boxes instead of divider rows */
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--s10);
+  margin-top: var(--s40);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: var(--s14) var(--s20);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-rest);
+  font-size: 16px;
+}
+
+.detail dt {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.detail a {
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.25);
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .lead {
+    font-size: 24px;
+  }
+  .details {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,0 +1,142 @@
+/* ------------------------------------------------------------------
+   Design tokens — Dia-inspired: monochrome layout, accents only inside
+   small UI fragments (chips, status dots), two radius poles.
+------------------------------------------------------------------- */
+:root {
+  /* monochrome layout */
+  --ink: #000000;
+  --surface: #ffffff;
+  --canvas: #f8f8f8;
+  --hairline: #ebebeb;
+  --muted: #929292;
+  --ink-soft: #555555; /* long-form text: #929292 is too light to read comfortably */
+  --silver: #c8cdd2; /* neutral dot for the "Silver" medallion tier */
+
+  /* accents: tech chips + status dots ONLY */
+  --sunglow: #ffd400;
+  --amber: #ffb005;
+  --sky: #96d0ff;
+  --blue: #0358f7;
+  --lime: #f2fcb3;
+
+  /* two radius poles */
+  --r-card: 20px;
+  --r-pill: 9999px;
+
+  /* spacing scale */
+  --s5: 5px;
+  --s10: 10px;
+  --s14: 14px;
+  --s16: 16px;
+  --s20: 20px;
+  --s30: 30px;
+  --s40: 40px;
+  --section-gap: clamp(70px, 8vw, 90px);
+  --gutter: clamp(20px, 4vw, 40px);
+  --container: 1040px;
+
+  /* depth: very soft, lit from above */
+  --shadow-rest: 0 1px 2px rgba(0, 0, 0, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  --shadow-soft: 0 8px 22px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+}
+
+/* Base styles. Selectors are prefixed with `html body` on purpose: the portfolio theme
+   (still used by the /privacy and /imprint pages) ships global rules for body, h1-h4
+   and a that land in the same stylesheet; this keeps them from leaking into the page. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-bottom: 130px; /* focused elements stay clear of the bottom arc dock */
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light;
+}
+
+html body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body p,
+html body ul,
+html body ol,
+html body dl,
+html body dd {
+  margin: 0;
+  padding: 0;
+}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+html body ul,
+html body ol {
+  list-style: none;
+}
+
+html body a {
+  display: inline;
+  color: inherit;
+  text-decoration: none;
+}
+
+html body button {
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+html body img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--sunglow);
+  color: var(--ink);
+}
+
+html body :focus-visible {
+  outline: 2px solid var(--ink);
+  outline-style: solid;
+  outline-offset: 3px;
+}
+
+html body a:focus:not(:focus-visible),
+html body button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

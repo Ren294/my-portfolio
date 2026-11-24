@@ -1,0 +1,295 @@
+/* ------------------------------------------------------------------
+   Projects.
+   Desktop (>= 900px): scroll-linked story — a sticky step list on the left whose
+   active step opens as the matching picture scrolls through the right column.
+   Below that: plain stacked cards.
+------------------------------------------------------------------- */
+
+/* shared bits ----------------------------------------------------- */
+.category {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s5);
+}
+
+/* always-visible secondary button */
+.github {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--s5) var(--s14);
+  border-radius: var(--r-pill);
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+  box-shadow: var(--shadow-rest);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+/* story (desktop) ------------------------------------------------- */
+.story {
+  display: none;
+}
+
+.stack {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s20);
+}
+
+@media (min-width: 640px) {
+  .stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .story {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    column-gap: var(--s30);
+  }
+  .stack {
+    display: none;
+  }
+}
+
+@media (min-width: 1100px) {
+  .story {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  }
+}
+
+/* left: sticky steps */
+.steps {
+  position: sticky;
+  top: clamp(88px, 14vh, 130px);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-height: 780px) {
+  .steps {
+    position: static; /* short screens: let the list scroll instead of clipping */
+  }
+}
+
+.step {
+  position: relative;
+  padding: var(--s14) var(--s20) var(--s14) var(--s30);
+}
+
+/* the 3px indicator bar */
+.bar {
+  position: absolute;
+  left: 0;
+  top: 16%;
+  bottom: 16%;
+  width: 3px;
+  border-radius: var(--r-pill);
+  background: var(--ink);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.step[data-active="true"] .bar {
+  opacity: 0.85;
+}
+
+.stepHead {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.num {
+  display: block;
+  margin-bottom: var(--s5);
+  font-size: 12px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.stepTitle {
+  display: block;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: rgba(0, 0, 0, 0.45);
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.step[data-active="true"] .stepTitle {
+  color: rgba(0, 0, 0, 0.88);
+}
+
+/* description opens with the 0fr -> 1fr grid trick, no measured heights */
+.stepBody {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 0.3s;
+}
+.step[data-active="true"] .stepBody {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0.05s,
+    visibility 0s;
+}
+
+.stepInner {
+  min-height: 0;
+  overflow: hidden;
+  padding-top: var(--s10);
+}
+
+.stepText {
+  max-width: 36ch;
+  margin-bottom: var(--s14);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* right: pictures */
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s14);
+  min-height: 60vh;
+  padding-bottom: var(--s40);
+}
+
+.row .category {
+  padding: 0 var(--s5);
+}
+
+.row .tags {
+  padding: 0 var(--s5);
+}
+
+.visual {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-rest);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.visual[data-active="true"] {
+  box-shadow: var(--shadow-soft);
+}
+
+/* stacked cards (tablet / mobile) --------------------------------- */
+.item {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: var(--r-card);
+  background: var(--surface);
+  border: 1px solid var(--hairline);
+  box-shadow: var(--shadow-rest);
+}
+
+.media {
+  display: block;
+  aspect-ratio: 1.85 / 1; /* close to the diagrams' own ratios, so little is cropped */
+  overflow: hidden;
+  background: var(--canvas);
+}
+.media > :global([data-gatsby-image-wrapper]) {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--s20);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s10);
+  padding: var(--s14) var(--s20);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  margin-top: var(--s10);
+  margin-bottom: var(--s20);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.content .tags {
+  margin-top: auto;
+}
+
+/* "See more" ------------------------------------------------------ */
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--s30);
+}
+
+.moreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s10);
+  padding: var(--s14) var(--s20);
+  border-radius: var(--r-pill);
+  border: 1px solid var(--hairline);
+  background: var(--surface);
+  box-shadow: var(--shadow-rest);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar,
+  .stepTitle,
+  .stepBody,
+  .step[data-active="true"] .stepBody,
+  .visual {
+    transition: none;
+  }
+}
