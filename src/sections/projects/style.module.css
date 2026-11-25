@@ -172,6 +172,10 @@
 }
 
 /* right: pictures */
+.visuals {
+  min-width: 0; /* lets the grid column shrink instead of the pictures forcing it wider */
+}
+
 .row {
   display: flex;
   flex-direction: column;
